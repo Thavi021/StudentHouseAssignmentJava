@@ -1,0 +1,118 @@
+package q2assignment;
+import javax.swing.JOptionPane;
+import java.util.Random;
+/**
+ *
+ * @author Thaveshan
+ */
+public class Q2Assignment {
+//Declarations
+    //Names of students
+    String studentName1;
+    String studentName2;
+    String studentName3;
+    
+    //House switch statements
+    int studentHouse1;
+    int studentHouse2;
+    int studentHouse3;
+    
+    //House
+    String house1;
+    String house2;
+    String house3;
+   
+    //Main Method
+    public static void main(String[] args) {
+        
+        Q2Assignment a = new Q2Assignment();
+        
+        a.inputName();
+        
+        a.displayAssignment();
+    }
+       
+    //Method including the input of the students names.
+    //Includes Switch statements to assign these students to random houses.
+    public void inputName(){
+        
+        
+        Random ran = new Random();
+        int LIMIT = 3;
+        
+        studentName1 = JOptionPane.showInputDialog(null,"Please enter the first student name.");
+        
+        switch(studentHouse1 = ran.nextInt(LIMIT))
+        {
+            case 0:
+                house1 = "RED";
+                break;
+            case 1:
+                house1 = "BLUE";
+                break;
+            case 2:
+                house1 = "WHITE";
+                break;
+            default:
+                System.out.println("You have entered a false name.");
+        }
+        
+        
+        
+         
+        studentName2 = JOptionPane.showInputDialog(null,"Please enter the second student name.");
+        
+        switch(studentHouse2 = ran.nextInt(LIMIT))
+        {
+            case 0:
+                house2 = "RED";
+                break;
+            case 1:
+                house2 = "BLUE";
+                break;
+            case 2:
+                house2 = "WHITE";
+                break;
+            default:
+                System.out.println("You have entered a false name.");
+        }
+        
+        
+        
+        
+        studentName3 = JOptionPane.showInputDialog(null,"Please enter the third student name.");
+        
+        switch(studentHouse3 = ran.nextInt(LIMIT))
+        {
+            case 0:
+                house3 = "RED";
+                break;
+            case 1:
+                house3 = "BLUE";
+                break;
+            case 2:
+                house3 = "WHITE";
+                break;
+            default:
+                System.out.println("You have entered a false name.");
+        }
+        
+    } 
+   
+    //Display of the SCHOOL HOUSE ASSIGNMENTS
+    public void displayAssignment(){
+        
+        
+        Random ran = new Random();
+        final int LIMIT = 1000;
+        
+        
+        
+        JOptionPane.showMessageDialog(null,"                        SCHOOL HOUSE ASSIGNMENT \n"+
+                                           "**************************************************************************** \n"+
+                                           studentName1 + " is assigned to the " + house1 + " house with student number "+ house1 + ran.nextInt(LIMIT)+""+"\n"+
+                                           studentName2 + " is assigned to the " + house2 + " house with student number "+ house2 + ran.nextInt(LIMIT)+""+ "\n"+
+                                           studentName3 + " is assigned to the " + house3 + " house with student number "+ house3 + ran.nextInt(LIMIT)+""+"\n");
+    }
+    
+}
